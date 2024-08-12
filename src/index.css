@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    /* height: 100%; */
+}
+
+@layer components {
+    .max-container {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .text-stroke-black {
+        -webkit-text-stroke: 2px black;
+    }
+
+    .text-stroke-purple {
+        -webkit-text-stroke: 2px purple;
+    }
+
+
+    .hinside {
+        @apply h-[calc(100%-133px)];
+    }
+
+    .input {
+        @apply sm:flex-1 max-sm:w-full text-base leading-normal text-slate-gray pl-5 max-sm:p-5 outline-none sm:border-none border max-sm:border-slate-gray max-sm:rounded-full;
+    }
+
+    .course-modal .ant-modal-content {
+        @apply bg-opacity-85 bg-white rounded-xl p-8
+    }
+
+    .session-success-modal .ant-modal-content {
+        @apply bg-opacity-85 bg-green-200 rounded-xl sm:w-[800px] w-[calc(100vw-30px)] sm:p-10 p-4
+    } 
+
+    .antd-table {
+        .ant-table {
+            .ant-table-container {
+                @apply bg-white rounded-none shadow-xl;
+            }
+
+            table {
+                @apply border-collapse border border-black ;
+
+                thead {
+                    @apply border-opacity-70 backdrop-blur-sm bg-gradient-to-tr from-violet-400 to-sky-200 border-b border-black;
+                }
+
+                thead > tr > .ant-table-cell {
+                    @apply bg-opacity-30 bg-white hover:bg-transparent text-black border-b-2 border-black  ;
+                }
+
+                th:nth-child(1), td:nth-child(1) {
+                    @apply w-[40px] tabular-nums  ;
+                }
+
+                th:nth-child(2), td:nth-child(2) {
+                    @apply w-[45px];
+                }
+
+                th:nth-child(3), td:nth-child(3) {
+                    @apply w-[200px];
+                }
+
+                th:nth-child(4), td:nth-child(4) {
+                    @apply w-[350px];
+                }
+
+                th:nth-child(5), td:nth-child(5) {
+                    @apply w-[150px];
+                }
+
+                thead > tr:first-child > *:first-child,
+                thead > tr:first-child > *:last-child {
+                    border-start-start-radius: 0px;
+                    border-start-end-radius: 0px;
+                }
+
+
+                .ant-table-cell {
+                    @apply rounded-s-none border-none;
+                }
+            }
+        }
+
+        /* .table-wrapper .ant-table-container table > thead > tr:first-child > *:first-child {
+            border-start-start-radius: 0px;
+        } */
+
+        .ant-pagination-item {
+            @apply bg-white rounded-none shadow-sm border-[1px] border-black;
+
+            a {
+                @apply text-black
+            }
+        }
+
+        .ant-pagination-prev & .ant-pagination-next {
+            @apply bg-white rounded-none shadow-sm border-[1px] border-black;
+        }
+    }
+}
+
+@layer utilities {
+    .padding {
+        @apply sm:px-16 px-8 sm:py-24 py-12;
+    }
+
+    .padding-x {
+        @apply sm:px-16 px-8;
+    }
+
+    .padding-y {
+        @apply sm:py-24 py-12;
+    }
+
+    .padding-l {
+        @apply sm:pl-16 pl-8;
+    }
+
+    .padding-r {
+        @apply sm:pr-16 pr-8;
+    }
+
+    .padding-t {
+        @apply sm:pt-24 pt-12;
+    }
+
+    .padding-b {
+        @apply sm:pb-24 pb-12;
+    }
+
+    .info-text {
+        @apply font-montserrat text-slate-gray text-lg leading-7;
+    }
+
+    .animation-delay-2000 {
+        animation-delay: 2s;
+    }
+
+    .animation-delay-4000 {
+        animation-delay: 4s;
+    }
+}
